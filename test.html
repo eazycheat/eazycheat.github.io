@@ -1,0 +1,47 @@
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' type='text/javascript'/>
+<style>
+.download-button{
+	background: #fff;
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	display: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+    pointer-events: none;
+}
+.uparrow, .msgBtn{display:none}
+.ads{display:block}
+.dwonload-button{display:none}
+</style>
+
+<script>
+$(function(){
+    setTimeout(function(){
+ if($('.ads').css('display') == "none") {
+   $('.dwonload-button').fadeIn('slow');
+    $('.msgBtn').fadeIn('slow');     
+    $('.uparrow').css({'display':'block'});
+   }else{$('.download-button').fadeIn('slow');}
+},3500);
+});
+</script>
+
+<div class='CenterBtn'>
+<form action='javascript:dload()' expr:id='data:post.id'>
+<input class='download-button' expr:id='data:post.id + &quot;btn&quot; ' type='submit' value='DOWNLOAD GAME SAVE'/>
+</form>
+<input type='button' class='dwonload-button' value='DOWNLOAD LOCKED!'/>
+</div>
+<div class=ads>
+<p>test</p>
+</div>
+<div class=msgBtn>
+<p>meassage</p>
+</div>
+<div class=uparrow>
+<p>uparrow</p>
+</div>
